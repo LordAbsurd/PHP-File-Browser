@@ -12,6 +12,8 @@ Unnamed Simple File Browser (what an incredible name, isn't it?) is a file brows
 The main problem is the quality of the code. I know it's very bad to mixing logic and interface,  VanillaJS and jQuery.
 I will try to correct quality code with future commits.
 
+[Demo](http://stuff.snouwer.ru)
+
 Installation
 ------------
 1. Clone this repo to web site folder
