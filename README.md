@@ -9,7 +9,7 @@ Unnamed Simple File Browser (what an incredible name, isn't it?) is a file brows
 * Admin panel with file uploading
 * Responsive interface (Bootstrap, yeah)
 
-The main problem is the quality of the code. I know it's very bad to mixing logic and interface,  VanillaJS and JQuery.
+The main problem is the quality of the code. I know it's very bad to mixing logic and interface,  VanillaJS and jQuery.
 I will try to correct quality code with future commits.
 
 Installation
@@ -20,8 +20,22 @@ Installation
 4. Edit default files folder in admin (example.com/admin/)
 5. That's it!
 
+Additional Information
+----------------------
+
 Unnamed Simple File Browser is still in beta, so there may be some errors.
 
 Licensed under GPLv2.
-Author: Vladislav Kovalev
+
+Author: Vladislav Kovalev.
+
 Some ideas was taken from Encode Explorer.
+
+Used libraries: 
+
+* simpleDB by DeusModus
+* Bootstrap
+* Sortable by Stuart Langridge 
+* jQuery
+* jQuery Tagsinput plugin by XOXCO
+* Bootbox
