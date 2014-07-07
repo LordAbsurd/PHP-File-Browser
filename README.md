@@ -1,5 +1,6 @@
 Unnamed Simple File Browser
 ============
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/SnoUweR/PHP-File-Browser/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/SnoUweR/PHP-File-Browser/?branch=master)
 
 Unnamed Simple File Browser (what an incredible name, isn't it?) is a file browser written in PHP, JavaScript and CSS. It displays the list of files and folders in a folder.
 
