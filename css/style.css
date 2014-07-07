@@ -1,0 +1,66 @@
+/* based on this
+ * http://css-tricks.com/snippets/php/display-styled-directory-contents/
+ * */
+
+body {
+	color: #333;
+	font: 14px Sans-Serif;
+}
+
+h1 {
+	text-align: center;
+	padding: 20px 0 12px 0;
+	margin: 0;
+}
+
+h2 {
+	font-size: 16px;
+	text-align: center;
+	padding: 0 0 12px 0; 
+}
+
+
+th {
+	background-color: rgba(41, 129, 153, 1);
+	color: #FFF;
+	cursor: pointer;
+	padding: 5px 10px;
+}
+
+th small {
+	font-size: 9px; 
+}
+
+td, th {
+	text-align: left;
+}
+
+a {
+	text-decoration: none;
+}
+
+td a {
+	color: #663300;
+
+}
+th a {
+	padding-left: 0
+}
+
+.table {
+    font-size: 0.77em;
+}
+
+.table > tbody > tr > td {
+    padding: 7px;
+}
+
+#thumbnail {
+    position:absolute;
+    border: 1px solid #CDD2D6;
+    background:#f8f9fa;
+    padding:3px;
+    display:block;
+    width: 200px;
+    height:200px;
+}
