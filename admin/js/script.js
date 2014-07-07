@@ -136,8 +136,8 @@ $(document).ready(function () {
         $('#progressDiv').hide();
         $(uploadButton).removeClass('disabled');
         uploadButton.innerHTML = 'Upload';
-        //refreshPage();
-        alert(evt.target.responseText);
+        refreshPage();
+        //alert(evt.target.responseText);
     }
 
     function uploadFailed(evt) {
