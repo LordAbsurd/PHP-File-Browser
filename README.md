@@ -32,7 +32,7 @@ Licensed under GPLv2.
 
 Author: Vladislav Kovalev.
 
-Some ideas was taken from Encode Explorer.
+Some ideas were taken from Encode Explorer.
 
 Used libraries: 
 
