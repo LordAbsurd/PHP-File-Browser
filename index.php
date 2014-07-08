@@ -354,7 +354,7 @@ $indexCount = count($elementsArray);
                 </div>
             </div>
         </div>
-        <div class="footer text-center">Powered by <a href="http://github.com/SnoUweR/php-file-browser"><strong>Unnamed Simple File Browser<strong></a></div>
+        <div class="footer text-center">Powered by <a href="http://github.com/SnoUweR/php-file-browser"><strong>Unnamed Simple File Browser</strong></a></div>
         <img id="thumbnail" style="display:none" src="" />
     </div>
 </body>
