@@ -185,7 +185,7 @@ header('Content-type: text/html; charset=utf-8');
         </div>
     </div>
     <div class="footer text-center">Powered by <a href="http://github.com/SnoUweR/php-file-browser"><strong>Unnamed
-                Simple File Browser<strong></a></div>
+                Simple File Browser</strong></a></div>
 </div>
 </body>
 </html>
