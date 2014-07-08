@@ -42,12 +42,25 @@ function AddFile($filename, $description)
     global $_SQL;
     if (!isFileInDB($filename))
     {
-        $query = $_SQL->insert('INSERT INTO files (filename, description) VALUES ("'.quote_smart($filename).'","'. quote_smart($description).'")');
+        return $query = $_SQL->insert('INSERT INTO files (filename, description) VALUES ("'.quote_smart($filename).'","'. quote_smart($description).'")');
     }
     else
     {
-        $query = $_SQL->update('UPDATE files SET description="'.quote_smart($description).'"
+        return SetDescription($filename, $description);
+    }
+}
+
+function SetDescription($filename, $description)
+{
+    global $_SQL;
+    if (isFileInDB($filename))
+    {
+        return $query = $_SQL->update('UPDATE files SET description="'.quote_smart($description).'"
      WHERE filename="' . quote_smart($filename) . '"');
+    }
+    else
+    {
+        return AddFile($filename, $description);
     }
 }
 
@@ -59,20 +72,6 @@ function isFileInDB($filename)
         return true;
     }
     return false;
-}
-
-function SetDescription($filename, $description)
-{
-    global $_SQL;
-    if (isFileInDB($filename))
-    {
-        $query = $_SQL->update('UPDATE files SET description="'.quote_smart($description).'"
-     WHERE filename="' . quote_smart($filename) . '"');
-    }
-    else
-    {
-        $query = $_SQL->insert('INSERT INTO files (filename, description) VALUES ("'.quote_smart($filename).'","'. quote_smart($description).'")');
-    }
 }
 
 function GetOptions($option)
@@ -92,7 +91,7 @@ function GetOptions($option)
 function SetOption($option, $value)
 {
     global $_SQL;
-    $query = $_SQL->update('UPDATE options SET option_value="'.quote_smart($value).'"
+    return $query = $_SQL->update('UPDATE options SET option_value="'.quote_smart($value).'"
      WHERE option_name="' . quote_smart($option) . '"');
 }
 
@@ -170,7 +169,7 @@ function RemoveFile($file)
 {
     global $_SQL;
 
-    $query = $_SQL->delete('DELETE FROM files WHERE filename="'.$file.'"');
+    return $query = $_SQL->delete('DELETE FROM files WHERE filename="'.$file.'"');
     unlink(realpath(ABSPATH.GetOptions("directory").DIRECTORY_SEPARATOR.$file));
 }
 

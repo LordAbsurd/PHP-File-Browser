@@ -36,13 +36,13 @@ mb_regex_encoding("UTF-8");
 header('Content-type: text/html; charset=utf-8');
 
 $_RAWDIRECTORY = GetOptions("directory");
-$_RELDIRECTORY = "";
+$_RELDIRECTORY = "/";
 
 if (!file_exists(ABSPATH.$_RAWDIRECTORY)) {
     mkdir(ABSPATH.$_RAWDIRECTORY, 0777, true);
 }
 
-if (!isset($_GET['dir']) && empty($_GET['dir']))
+if (!isset($_GET['dir']) && empty($_GET['dir']) || strlen($_GET['dir'] == 0))
 {
     $_DIRECTORY = realpath(ABSPATH.$_RAWDIRECTORY).DIRECTORY_SEPARATOR;
 }

@@ -7,7 +7,6 @@ require_once(ABSPATH . "helpers.php");
 
 $directory = GetOptions("directory");
 $uploaddir = ABSPATH . $directory . DIRECTORY_SEPARATOR . $_POST['location'] . DIRECTORY_SEPARATOR;
-$reallocation;
 
 if (!file_exists($uploaddir)) {
     mkdir($uploaddir, 0777, true);
@@ -20,6 +19,10 @@ $uploadfile = $uploaddir . basename($_FILES['file']['name']);
 //wtf is this?
 if (mb_substr($reallocation = remove_dot_segments($_POST['location']), -1) == '/') {
     $reallocation = rtrim($reallocation, "/");
+}
+else
+{
+    $reallocation = "";
 }
 
 var_dump("FILE EXIST: ".$uploadfile);
