@@ -42,7 +42,7 @@ if (!file_exists(ABSPATH.$_RAWDIRECTORY)) {
     mkdir(ABSPATH.$_RAWDIRECTORY, 0777, true);
 }
 
-if (!isset($_GET['dir']) && empty($_GET['dir']) || strlen($_GET['dir'] == 0))
+if (!isset($_GET['dir']) && empty($_GET['dir']) || strlen($_GET['dir']) == 0)
 {
     $_DIRECTORY = realpath(ABSPATH.$_RAWDIRECTORY).DIRECTORY_SEPARATOR;
 }

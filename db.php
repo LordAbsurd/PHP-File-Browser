@@ -168,9 +168,8 @@ function GetFiles()
 function RemoveFile($file)
 {
     global $_SQL;
-
-    return $query = $_SQL->delete('DELETE FROM files WHERE filename="'.$file.'"');
     unlink(realpath(ABSPATH.GetOptions("directory").DIRECTORY_SEPARATOR.$file));
+    return $query = $_SQL->delete('DELETE FROM files WHERE filename="'.$file.'"');
 }
 
 SQLSide();
