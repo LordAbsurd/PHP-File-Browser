@@ -42,7 +42,7 @@ function AddFile($filename, $description)
     global $_SQL;
     if (!isFileInDB($filename))
     {
-        return $query = $_SQL->insert('INSERT INTO files (filename, description) VALUES ("'.quote_smart($filename).'","'. quote_smart($description).'")');
+        return $_SQL->insert('INSERT INTO files (filename, description) VALUES ("'.quote_smart($filename).'","'. quote_smart($description).'")');
     }
     else
     {
@@ -55,7 +55,7 @@ function SetDescription($filename, $description)
     global $_SQL;
     if (isFileInDB($filename))
     {
-        return $query = $_SQL->update('UPDATE files SET description="'.quote_smart($description).'"
+        return $_SQL->update('UPDATE files SET description="'.quote_smart($description).'"
      WHERE filename="' . quote_smart($filename) . '"');
     }
     else
@@ -91,7 +91,7 @@ function GetOptions($option)
 function SetOption($option, $value)
 {
     global $_SQL;
-    return $query = $_SQL->update('UPDATE options SET option_value="'.quote_smart($value).'"
+    return $_SQL->update('UPDATE options SET option_value="'.quote_smart($value).'"
      WHERE option_name="' . quote_smart($option) . '"');
 }
 
@@ -158,9 +158,7 @@ function GetDescription($filename)
 function GetFiles()
 {
     global $_SQL;
-
-    $query = $_SQL->select('SELECT * FROM files');
-    return $query;
+    return $_SQL->select('SELECT * FROM files');
 }
 
 //TODO: Maybe I should add a check for writable
@@ -169,7 +167,7 @@ function RemoveFile($file)
 {
     global $_SQL;
     unlink(realpath(ABSPATH.GetOptions("directory").DIRECTORY_SEPARATOR.$file));
-    return $query = $_SQL->delete('DELETE FROM files WHERE filename="'.$file.'"');
+    return $_SQL->delete('DELETE FROM files WHERE filename="'.$file.'"');
 }
 
 SQLSide();
